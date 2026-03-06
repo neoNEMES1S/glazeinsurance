@@ -1056,7 +1056,20 @@ body.slide-menu-dark .header #mainnav .menu li a:hover {
 @media screen and (min-width:320px) and (max-width:767px) {
     .desk_slider{display:none !important;}
     .mob_slider{display:block !important;}
+}
 
+/* Ensure Carousel Images are uniform height */
+.carousel-inner .desk_slider {
+    height: 700px; /* Fixed height for desktop hero */
+    object-fit: cover;
+    object-position: center;
+}
+@media (max-width: 767px) {
+    .carousel-inner .mob_slider {
+        height: 500px; /* Fixed height for mobile hero */
+        object-fit: cover;
+        object-position: top;
+    }
 }
 
 .service {padding-top: 3.5rem;padding-bottom: 3rem;display:inline-block;width:100%;background:#f9f9f9;}
